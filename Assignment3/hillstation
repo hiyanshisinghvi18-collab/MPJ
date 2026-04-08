@@ -1,0 +1,75 @@
+class Exp3 {
+
+    public static void main(String[] args) {
+
+        HillStation ref;
+
+        ref = new ManaliStation();
+        displayDetails(ref);
+
+        ref = new MussoorieStation();
+        displayDetails(ref);
+
+        ref = new MahabaleshwarStation();
+        displayDetails(ref);
+    }
+
+    // Common method to reduce repetition
+    static void displayDetails(HillStation hs) {
+        hs.showFamousPlace();
+        hs.showSpecialFood();
+        System.out.println();
+    }
+}
+
+// Base Class
+class HillStation {
+
+    void showFamousPlace() {
+        System.out.println("Hill stations are known for natural beauty.");
+    }
+
+    void showSpecialFood() {
+        System.out.println("They offer unique regional cuisines.");
+    }
+}
+
+// Derived Classes
+class ManaliStation extends HillStation {
+
+    @Override
+    void showFamousPlace() {
+        System.out.println("Manali is known for snow-covered peaks.");
+    }
+
+    @Override
+    void showSpecialFood() {
+        System.out.println("Manali is popular for Siddu.");
+    }
+}
+
+class MussoorieStation extends HillStation {
+
+    @Override
+    void showFamousPlace() {
+        System.out.println("Mussoorie is known for scenic waterfalls.");
+    }
+
+    @Override
+    void showSpecialFood() {
+        System.out.println("Mussoorie is popular for street momos.");
+    }
+}
+
+class MahabaleshwarStation extends HillStation {
+
+    @Override
+    void showFamousPlace() {
+        System.out.println("Mahabaleshwar is famous for strawberry farms.");
+    }
+
+    @Override
+    void showSpecialFood() {
+        System.out.println("Mahabaleshwar is known for fresh berries and corn.");
+    }
+}
